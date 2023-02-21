@@ -1,0 +1,52 @@
+## bind函数是什么
+> bind() 方法创建一个新的函数，在 bind() 被调用时，这个新函数的 this 被指定为 bind() 的第一个参数，而其余参数将作为新函数的参数，供调用时使用。 [MDN链接](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind#%E5%B0%9D%E8%AF%95%E4%B8%80%E4%B8%8B)
+
+## 实现
+```js
+Function.prototype._bind = function(context = window, ...args) {
+  // this是调用bind的函数
+  const self = this
+  // 返回一个函数，innerArgs是实际调用时传入的参数
+  function fBound(...innerArgs) {
+    // 利用 apply 改变this指向，并调用函数
+    return self.apply(context, [...args, ...innerArgs])
+  }
+
+  return fBound
+}
+```
+
+## 使用
+
+### 一、创建绑定函数
+```js
+/* 实验一：创建绑定函数 */
+function say() {
+  console.log(`我是${this.name},今年${this.age}岁`);
+}
+const me = {
+  name: 'zhaoyuuu',
+  age: 20
+}
+
+say()  // 我是undefined,今年undefined岁
+const boundSay = say._bind(me)
+boundSay()  // 我是zhaoyuuu,今年20岁
+```
+
+### 二、偏函数
+> 对**偏函数**不熟悉的同学们可以去MDN了解一下，以下是MDN原话：
+bind() 的另一个最简单的用法是使一个函数拥有预设的初始参数。只要将这些参数（如果有的话）作为 bind() 的参数写在 this 后面。当绑定函数被调用时，这些参数会被插入到目标函数的参数列表的开始位置，传递给绑定函数的参数会跟在它们后面。
+
+```js
+/* 实验二：偏函数 */
+function list() {
+  console.log(arguments);  // 输出参数列表
+}
+
+list('arg1', 'arg2')  // [Arguments] { '0': 'arg1', '1': 'arg2' }
+const presetList = list._bind(null, 'presetParameter')  // 不需要绑定this，所以第一个参数为null
+presetList('arg1', 'arg2')  // [Arguments] { '0': 'presetParameter', '1': 'arg1', '2': 'arg2' }
+```
+
+> 可以看到，我们成功地给`presetList`函数预设了一个参数`'presetParameter'`
