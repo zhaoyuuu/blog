@@ -11,7 +11,6 @@ export default {
     },
     nav: [{ text: 'Guide', link: '/guide' }],
     sidebar: [
-      { text: 'test', link: '/test' },
       {
         text: 'handwritten 手写',
         // collapsed: true,
@@ -37,5 +36,6 @@ export default {
         ],
       },
     ],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/zhaoyuuu/blog' }],
   },
 }
