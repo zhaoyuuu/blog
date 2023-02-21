@@ -4,7 +4,7 @@ export default {
   description: 'Just playing around.',
   themeConfig: {
     siteTitle: 'zhaoyuuu',
-    logo: '/logo.svg',
+    logo: '/assets/logo.svg',
     editLink: {
       pattern: 'https://github.com/zhaoyuuu/blog/tree/master/docs/:path',
       text: 'Edit this page on GitHub',
