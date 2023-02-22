@@ -17,6 +17,7 @@ export default {
           { text: 'introduction', link: '/gemstone/intro' },
           {
             text: 'Chapter 4 变量、作用域与内存',
+            collapsed: true,
             items: [
               {
                 text: '参数的传递',
@@ -29,6 +30,15 @@ export default {
               {
                 text: '垃圾回收',
                 link: '/gemstone/Chapter 4 变量、作用域与内存/垃圾回收',
+              },
+            ],
+          },
+          {
+            text: 'Chapter 6 集合引用类型',
+            items: [
+              {
+                text: 'Array',
+                link: '/gemstone/Chapter 6 集合引用类型/Array',
               },
             ],
           },
