@@ -9,8 +9,23 @@ export default {
       pattern: 'https://github.com/zhaoyuuu/blog/tree/master/docs/:path',
       text: 'Edit this page on GitHub',
     },
-    nav: [{ text: 'Guide', link: '/guide' }],
+    nav: [{ text: 'Guide', link: '/guide/' }],
     sidebar: [
+      {
+        text: 'gemstone 红宝书',
+        items: [
+          { text: '0 introduction', link: '/gemstone/intro' },
+          {
+            text: 'Chapter 4 变量、作用域与内存',
+            items: [
+              {
+                text: '参数的传递',
+                link: '/gemstone/Chapter 4 变量、作用域与内存/传递参数',
+              },
+            ],
+          },
+        ],
+      },
       {
         text: 'handwritten 手写',
         // collapsed: true,

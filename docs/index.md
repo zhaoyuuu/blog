@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /handwritten/intro
+      link: /gemstone/intro
     - theme: alt
       text: View on GitHub
       link: https://github.com/zhaoyuuu/blog
