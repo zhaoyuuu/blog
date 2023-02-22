@@ -22,6 +22,10 @@ export default {
                 text: '参数的传递',
                 link: '/gemstone/Chapter 4 变量、作用域与内存/传递参数',
               },
+              {
+                text: '执行上下文与作用域链',
+                link: '/gemstone/Chapter 4 变量、作用域与内存/执行上下文与作用域链',
+              },
             ],
           },
         ],
