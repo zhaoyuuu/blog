@@ -14,7 +14,7 @@ export default {
       {
         text: 'gemstone 红宝书',
         items: [
-          { text: '0 introduction', link: '/gemstone/intro' },
+          { text: 'introduction', link: '/gemstone/intro' },
           {
             text: 'Chapter 4 变量、作用域与内存',
             items: [
@@ -25,6 +25,10 @@ export default {
               {
                 text: '执行上下文与作用域链',
                 link: '/gemstone/Chapter 4 变量、作用域与内存/执行上下文与作用域链',
+              },
+              {
+                text: '垃圾回收',
+                link: '/gemstone/Chapter 4 变量、作用域与内存/垃圾回收',
               },
             ],
           },
