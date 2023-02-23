@@ -35,6 +35,7 @@ export default {
           },
           {
             text: 'Chapter 6 集合引用类型',
+            collapsed: true,
             items: [
               {
                 text: 'Object',
@@ -56,6 +57,10 @@ export default {
                 text: 'Set',
                 link: '/gemstone/Chapter 6 集合引用类型/Set',
               },
+              {
+                text: 'WeakSet',
+                link: '/gemstone/Chapter 6 集合引用类型/WeakSet',
+              },
             ],
           },
           {
@@ -71,7 +76,7 @@ export default {
       },
       {
         text: 'handwritten 手写',
-        // collapsed: true,
+        collapsed: true,
         items: [
           { text: '0 introduction', link: '/handwritten/intro' },
           { text: '1 实现防抖函数（debounce）', link: '/handwritten/debounce' },
@@ -91,6 +96,16 @@ export default {
           { text: '12 实现AJAX', link: '/handwritten/ajax' },
           { text: '13 手写常见排序', link: '/handwritten/sort' },
           { text: '14 Object合集', link: '/handwritten/Object' },
+        ],
+      },
+      {
+        text: 'essays 随笔',
+        items: [
+          { text: 'introduction', link: '/essays/intro' },
+          {
+            text: 'youth_traning_camp 青训营',
+            items: [{ text: 'webpack', link: '/essays/youth_camp/webpack' }],
+          },
         ],
       },
     ],
