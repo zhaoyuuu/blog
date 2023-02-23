@@ -2,6 +2,7 @@ export default {
   title: "zhaoyuuu's blog",
   lastUpdated: true,
   description: 'Just playing around.',
+  base: '/blog',
   themeConfig: {
     siteTitle: 'zhaoyuuu',
     logo: '/assets/logo.svg',
