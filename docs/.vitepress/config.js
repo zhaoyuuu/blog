@@ -37,6 +37,10 @@ export default {
             text: 'Chapter 6 集合引用类型',
             items: [
               {
+                text: 'Object',
+                link: '/gemstone/Chapter 6 集合引用类型/Object',
+              },
+              {
                 text: 'Array',
                 link: '/gemstone/Chapter 6 集合引用类型/Array',
               },
@@ -51,6 +55,15 @@ export default {
               {
                 text: 'Set',
                 link: '/gemstone/Chapter 6 集合引用类型/Set',
+              },
+            ],
+          },
+          {
+            text: 'Chapter 8 对象、类与面向对象编程',
+            items: [
+              {
+                text: '理解对象',
+                link: '/gemstone/Chapter 8 对象、类与面向对象编程/understand_object',
               },
             ],
           },
