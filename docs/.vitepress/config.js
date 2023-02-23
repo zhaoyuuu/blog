@@ -44,6 +44,10 @@ export default {
                 text: 'Map',
                 link: '/gemstone/Chapter 6 集合引用类型/Map',
               },
+              {
+                text: 'WeakMap',
+                link: '/gemstone/Chapter 6 集合引用类型/WeakMap',
+              },
             ],
           },
         ],
