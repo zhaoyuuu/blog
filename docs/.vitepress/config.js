@@ -40,6 +40,10 @@ export default {
                 text: 'Array',
                 link: '/gemstone/Chapter 6 集合引用类型/Array',
               },
+              {
+                text: 'Map',
+                link: '/gemstone/Chapter 6 集合引用类型/Map',
+              },
             ],
           },
         ],
