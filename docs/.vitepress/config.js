@@ -76,6 +76,15 @@ export default {
               },
             ],
           },
+          {
+            text: 'Chapter 12 BOM',
+            items: [
+              {
+                text: 'window 对象',
+                link: '/gemstone/Chapter 12 BOM/window',
+              },
+            ],
+          },
         ],
       },
       {
