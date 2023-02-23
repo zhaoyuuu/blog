@@ -70,6 +70,10 @@ export default {
                 text: '理解对象',
                 link: '/gemstone/Chapter 8 对象、类与面向对象编程/understand_object',
               },
+              {
+                text: '创建对象',
+                link: '/gemstone/Chapter 8 对象、类与面向对象编程/create_object',
+              },
             ],
           },
         ],

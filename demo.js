@@ -1,4 +1,12 @@
-let colors = ['red', 'blue', 'green'] // 创建一个包含 3 个字符串的数组
-console.log(colors.toString()) // red,blue,green
-console.log(colors.valueOf()) // red,blue,green
-console.log(colors) // red,blue,green
+let person = { age: 21 }
+Object.defineProperty(person, 'name', {
+  value: 'Nicholas',
+})
+console.log('person', person) //person { age: 21 } （无法直接获取到[name]）
+console.log(Object.getOwnPropertyDescriptor(person, 'name'))
+//{
+//   value: 'Nicholas',
+//   writable: false,
+//   enumerable: false,
+//   configurable: false
+// }
