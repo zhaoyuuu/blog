@@ -5,7 +5,7 @@ export default {
   base: '/blog',
   themeConfig: {
     siteTitle: 'zhaoyuuu',
-    logo: 'https://raw.githubusercontent.com/zhaoyuuu/blog/76c8d4df39ad76f49ff9ccc3ac611e309f3e1541/docs/assets/logo.svg',
+    logo: '/assets/logo.svg',
     editLink: {
       pattern: 'https://github.com/zhaoyuuu/blog/tree/master/docs/:path',
       text: 'Edit this page on GitHub',
@@ -78,6 +78,15 @@ export default {
               {
                 text: 'inherit 继承',
                 link: '/gemstone/Chapter 8 对象、类与面向对象编程/inherit',
+              },
+            ],
+          },
+          {
+            text: 'Chapter 11 期约与异步函数',
+            items: [
+              {
+                text: '异步编程',
+                link: '/gemstone/Chapter 11 期约与异步函数/异步编程',
               },
             ],
           },

@@ -1,0 +1,28 @@
+<svg width="600.000000" height="600.000061" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<g filter="url(#filter_2_11_dd)">
+		<rect id="矩形 1" width="600.000000" height="600.000061" fill="url(#paint_radial_2_11_0)" fill-opacity="0.9"/>
+		<rect id="矩形 1" width="600.000000" height="600.000061" fill="url(#paint_radial_2_11_1)" fill-opacity="0.4"/>
+	</g>
+	<path id="path" d="M354.112 347.345L310.614 385.477C306.402 389.169 305.994 395.378 309.686 399.589C313.377 403.8 319.586 404.208 323.797 400.516L367.296 362.385L369.246 360.675L410.788 324.258Q419.127 316.948 424.243 305.68Q429.487 294.134 429.957 281.36Q431.083 250.751 406.439 229.147Q382.419 208.091 349 209.036Q335.128 209.428 322.542 213.82Q310.093 218.164 301.914 225.334L244.289 275.85L184.476 328.283Q179.343 332.783 175.53 340.136Q171.197 348.493 170.248 357.649Q167.721 382.015 188.826 400.516Q209.219 418.393 235.358 416.31Q245.154 415.53 254.169 411.938Q262.245 408.72 267.253 404.329L323.797 354.761L380.341 305.193Q390.712 296.102 391.876 280.797Q393.207 263.303 380.341 252.025Q368.152 241.339 349.787 242.412Q333.544 243.361 323.662 252.025L282.758 287.883L241.021 324.47L241.049 324.472L254.207 339.482L254.205 339.51L241.021 324.47C236.81 328.162 236.401 334.371 240.093 338.582C243.784 342.793 249.994 343.201 254.205 339.51L295.942 302.922L336.846 267.064Q341.565 262.927 350.954 262.378Q361.133 261.783 367.157 267.064Q372.506 271.753 371.934 279.281Q371.389 286.445 367.157 290.154L310.613 339.722L254.069 389.29Q251.647 391.413 246.765 393.358Q240.556 395.833 233.769 396.373Q216.051 397.786 202.01 385.477Q188.681 373.792 190.141 359.712Q190.699 354.331 193.285 349.343Q195.363 345.337 197.66 343.323L257.473 290.889L315.098 240.374Q320.353 235.767 329.131 232.704Q338.791 229.333 349.566 229.028Q375.138 228.305 393.255 244.187Q410.747 259.52 409.97 280.624Q409.645 289.456 406.033 297.411Q402.7 304.751 397.604 309.218L356.062 345.636L354.112 347.345ZM323.799 400.488L323.797 400.516L310.614 385.477L310.642 385.479L323.799 400.488Z" fill-rule="evenodd" fill="#0DB18B"/>
+	<defs>
+		<filter id="filter_2_11_dd" x="0.000000" y="0.000000" width="600.000000" height="600.000061" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+			<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+			<feGaussianBlur in="BackgroundImage" stdDeviation="1.33333"/>
+			<feComposite in2="SourceAlpha" operator="in" result="effect_backgroundBlur_1"/>
+			<feBlend mode="normal" in="SourceGraphic" in2="effect_backgroundBlur_1" result="shape"/>
+		</filter>
+		<radialGradient id="paint_radial_2_11_0" cx="0.000000" cy="0.000000" r="1.000000" gradientUnits="userSpaceOnUse" gradientTransform="translate(300 300) rotate(90) scale(300 300)">
+			<stop stop-color="#D7F0E9" stop-opacity="0.901961"/>
+			<stop offset="0.617938" stop-color="#3EFCC4" stop-opacity="0.752941"/>
+			<stop offset="1.000000" stop-color="#E8E8E8" stop-opacity="0.000000"/>
+		</radialGradient>
+		<radialGradient id="paint_radial_2_11_1" cx="0.000000" cy="0.000000" r="1.000000" gradientUnits="userSpaceOnUse" gradientTransform="translate(300 300) rotate(90) scale(300 300)">
+			<stop stop-color="#F10000" stop-opacity="0.200000"/>
+			<stop offset="0.681934" stop-color="#CA2727" stop-opacity="0.082353"/>
+			<stop offset="1.000000" stop-color="#8F3A3A" stop-opacity="0.000000"/>
+		</radialGradient>
+	</defs>
+</svg>

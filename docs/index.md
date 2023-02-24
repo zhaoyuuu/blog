@@ -6,7 +6,7 @@ hero:
   text: Don't count the days, make the days count
   tagline: 总有些事值得记录
   image:
-    src: https://raw.githubusercontent.com/zhaoyuuu/blog/76c8d4df39ad76f49ff9ccc3ac611e309f3e1541/docs/assets/logo.svg
+    src: /assets/logo-with-bg.svg
     alt: logo
   actions:
     - theme: brand
