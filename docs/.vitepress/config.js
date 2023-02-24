@@ -101,6 +101,10 @@ export default {
                 text: 'location 对象',
                 link: '/gemstone/Chapter 12 BOM/location',
               },
+              {
+                text: 'navigator 对象',
+                link: '/gemstone/Chapter 12 BOM/navigator',
+              },
             ],
           },
         ],
