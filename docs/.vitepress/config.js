@@ -5,7 +5,7 @@ export default {
   base: '/blog',
   themeConfig: {
     siteTitle: 'zhaoyuuu',
-    logo: '/assets/logo.svg',
+    logo: 'https://raw.githubusercontent.com/zhaoyuuu/blog/206b969f0a010b2de78851fcecf01a00a96b1626/docs/assets/logo.svg',
     editLink: {
       pattern: 'https://github.com/zhaoyuuu/blog/tree/master/docs/:path',
       text: 'Edit this page on GitHub',
