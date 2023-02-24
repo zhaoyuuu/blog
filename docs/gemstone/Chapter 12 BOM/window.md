@@ -117,7 +117,7 @@ setInterval(() => alert("Hello world!"), 10000);
 
 > 由此可看出，执行时间短、非阻塞的回调函数比较适合 `setInterval()` （高情商 🤨）。说直白一点，一个任务**结束**和下一个任务**开始**之间的时间间隔是**无法保证**的，**有些循环定时任务可能会因此而被跳过**！`setIntervale()` 在实践中很少会在生产环境下使用。
 
-可以看一下我写的另一篇简短的文章：[基于 setTimeout 实现 setInterval](</handwritten/setInterval(setTimeout)>)
+相关链接：[基于 setTimeout 实现 setInterval](</handwritten/setInterval(setTimeout)>)
 
 ps：相对于 `setTimeout()`而言，**取消定时**的能力对 `setInterval()`更加重要。毕竟，如果一直不管它，那么定时任务会一直执行到页面卸载。
 

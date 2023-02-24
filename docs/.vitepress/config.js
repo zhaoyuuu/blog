@@ -75,6 +75,10 @@ export default {
                 text: '创建对象',
                 link: '/gemstone/Chapter 8 对象、类与面向对象编程/create_object',
               },
+              {
+                text: 'inherit 继承',
+                link: '/gemstone/Chapter 8 对象、类与面向对象编程/inherit',
+              },
             ],
           },
           {
