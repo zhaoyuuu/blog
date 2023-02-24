@@ -85,8 +85,8 @@ export default {
             text: 'Chapter 11 期约与异步函数',
             items: [
               {
-                text: '异步编程',
-                link: '/gemstone/Chapter 11 期约与异步函数/异步编程',
+                text: 'promise 期约',
+                link: '/gemstone/Chapter 11 期约与异步函数/promise',
               },
             ],
           },
@@ -96,6 +96,10 @@ export default {
               {
                 text: 'window 对象',
                 link: '/gemstone/Chapter 12 BOM/window',
+              },
+              {
+                text: 'location 对象',
+                link: '/gemstone/Chapter 12 BOM/location',
               },
             ],
           },

@@ -1,11 +1,15 @@
-function DadType() {
-  this.colors = ['red', 'blue', 'green']
+let getQueryStringArgs = function () {
+  // 取得没有开头问号的查询字符串
+  let qs = location.search.length > 0 ? location.search.substring(1) : '',
+    // 保存数据的对象
+    args = {}
+  // 把每个参数添加到 args 对象
+  for (let item of qs.split('&').map(kv => kv.split('='))) {
+    let name = decodeURIComponent(item[0]),
+      value = decodeURIComponent(item[1])
+    if (name.length) {
+      args[name] = value
+    }
+  }
+  return args
 }
-function SonType() {}
-// 继承 DadType
-SonType.prototype = new DadType()
-let instance1 = new SonType()
-instance1.colors.push('black')
-console.log(instance1.colors) // "red,blue,green,black"
-let instance2 = new SonType()
-console.log(instance2.colors) // "red,blue,green,black"
