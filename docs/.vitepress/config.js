@@ -94,15 +94,15 @@ export default {
             text: 'Chapter 12 BOM',
             items: [
               {
-                text: 'window 对象',
+                text: 'window',
                 link: '/gemstone/Chapter 12 BOM/window',
               },
               {
-                text: 'location 对象',
+                text: 'location',
                 link: '/gemstone/Chapter 12 BOM/location',
               },
               {
-                text: 'navigator 对象',
+                text: 'navigator',
                 link: '/gemstone/Chapter 12 BOM/navigator',
               },
             ],
