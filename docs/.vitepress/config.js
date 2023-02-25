@@ -85,8 +85,12 @@ export default {
             text: 'Chapter 11 期约与异步函数',
             items: [
               {
-                text: 'promise 期约',
+                text: 'promise',
                 link: '/gemstone/Chapter 11 期约与异步函数/promise',
+              },
+              {
+                text: 'async & await',
+                link: '/gemstone/Chapter 11 期约与异步函数/async&await',
               },
             ],
           },
