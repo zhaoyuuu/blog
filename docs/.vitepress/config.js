@@ -149,7 +149,13 @@ export default {
           { text: 'introduction', link: '/essays/intro' },
           {
             text: 'youth_traning_camp 青训营',
-            items: [{ text: 'webpack', link: '/essays/youth_camp/webpack' }],
+            items: [
+              {
+                text: 'violet-design',
+                link: '/essays/youth_camp/violet-design',
+              },
+              { text: 'webpack', link: '/essays/youth_camp/webpack' },
+            ],
           },
         ],
       },
