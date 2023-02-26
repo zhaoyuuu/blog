@@ -14,7 +14,7 @@
 
 <!-- 这是一次很美好的团队协作经历，我在这次项目中学到了很多，也结交了六个可爱的队友。 -->
 
-## 初衷
+## 文章初衷
 
 向你展示我们是怎么**从 0 到 1 开发组件库**的（魔鬼都在细节中~），如果你觉得我们做得不错、或者对你有所启发的话，请给我们的仓库一个 `star` ，这对我们来说帮助很大 🙏。
 
@@ -135,7 +135,7 @@ src -- 项目的源代码<br>
 
 > 以上说的都是**项目初期**我们注意的点，可以看到注意事项还是比较多的。**项目中期**的工作其实就比较 normal 了，无非是学习技术、并遵循上面制定的规则去录入组件。
 
-而到**项目后期**，似乎又有那么一点不一样（有意思）了。
+而到**项目后期**，似乎又有那么一点不一样（有意思）了 😋。
 
 ### 部署文档站
 
@@ -148,9 +148,13 @@ src -- 项目的源代码<br>
 
 ### 发布 npm
 
-相关链接：[npm 发包官方教程](https://docs.npmjs.com/creating-and-publishing-scoped-public-packages)
+- **想要发布包到 npm 上，首先你需要把你想要的文件打包在一起。** 我们借助 `Rollup` 来打包，`Rollup` 配置可以在 `/rollup` 文件夹下看到。最后我们打包生成三个我们想要的文件：**esm 格式的 JS 文件**、**umd 格式的 JS 文件**，以及 **css 样式文件**。
 
-**`package.json` 文件中有很多跟 npm 相关的配置项**，所以写好 `package.json` 可以让你的包在 npm 上显示得更加丰满。推荐：[package.json 配置完全解读](https://juejin.cn/post/7161392772665540644)
+> 注意，打包的入口文件在 **目录结构** 里也提到了，即：`src/index.tsx` 是 JS 入口文件，`src/styles/index.scss` 是样式入口文件。
+
+- 接下来就是把这些打包生成的文件上传到 npm：[npm 发包官方教程](https://docs.npmjs.com/creating-and-publishing-scoped-public-packages)
+
+> **`package.json` 文件中有很多跟 npm 相关的配置项**，所以写好 `package.json` 可以让你的包在 npm 上显示得更加丰满。推荐：[package.json 配置完全解读](https://juejin.cn/post/7161392772665540644)
 
 ### CICD
 
@@ -166,5 +170,8 @@ CICD 即持续部署、持续交付。<br>
 
 ---
 
-🎉 以上就是 `violet-design` 的全部内容了。所有的开发路线、技术亮点，还有夹杂在这篇文章中、随处可见的每一个超链接，都是我们在 开发这个组件库的过程中 寻找到的宝石 💎，我们已经毫无保留地将它呈现给你了，希望可以帮助到你。<br>
-如果你不介意的话，请给 `violet-design` 一个 star，这对我们来说非常重要，[violet-design -- github](https://github.com/zhaoyuuu/violet-design)。
+🎉 以上就是 `violet-design` 的全部内容了，本文并没有“手把手”教你怎么开发，而是向你展示我们在每个阶段都做了什么。<br>
+✨ `violet-design` 所有的开发路线、技术亮点 我们都已经毫无保留地将它呈现给你了。还有夹杂在这篇文章中、随处可见的每一个超链接，都是我们在 开发这个组件库的过程中 寻找到的宝石 💎，希望它们（一定）可以帮助到你。<br>
+<br>
+
+如果你不介意的话，还请给 `violet-design` 一个 star⭐，这对我们帮助很大，[violet-design -- github](https://github.com/zhaoyuuu/violet-design)。
