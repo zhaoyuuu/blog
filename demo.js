@@ -1,16 +1,15 @@
-async function foo() {
-  console.log(2)
-  console.log(await 8)
-  console.log(9)
+class SuperArray extends Array {
+  shuffle() {
+    // 洗牌算法
+    for (let i = this.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[this[i], this[j]] = [this[j], this[i]]
+    }
+  }
 }
-async function bar() {
-  console.log(4)
-  console.log(await 6)
-  console.log(7)
-}
-console.log(1)
-foo()
-console.log(3)
-bar()
-console.log(5)
-// 1 2 3 4 5 8 9 6 7
+let a = new SuperArray(1, 2, 3, 4, 5)
+console.log(a instanceof Array) // true
+console.log(a instanceof SuperArray) // true
+console.log(a) // [1, 2, 3, 4, 5]
+a.shuffle()
+console.log(a) // [3, 1, 4, 5, 2]

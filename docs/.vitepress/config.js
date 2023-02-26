@@ -79,10 +79,16 @@ export default {
                 text: 'inherit 继承',
                 link: '/gemstone/Chapter 8 对象、类与面向对象编程/inherit',
               },
+
+              {
+                text: 'class 类',
+                link: '/gemstone/Chapter 8 对象、类与面向对象编程/class',
+              },
             ],
           },
           {
             text: 'Chapter 11 期约与异步函数',
+            collapsed: true,
             items: [
               {
                 text: 'promise',
