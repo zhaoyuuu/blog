@@ -17,7 +17,7 @@ class Person {}
 const Animal = class {};
 ```
 
-与函数表达式类似，类表达式在它们**被求值前也不能引用**。不过，与**函数定义不同**的是，虽然**函数声明可以提升，但类定义不能**：
+- 与函数表达式类似，类表达式在它们**被求值前也不能引用**。不过，与**函数定义不同**的是，虽然**函数声明可以提升，但类定义不能**：
 
 ```js{5,13}
 console.log(FunctionExpression); // undefined
@@ -37,7 +37,7 @@ class ClassDeclaration {}
 console.log(ClassDeclaration); // class ClassDeclaration {}
 ```
 
-另一个跟函数声明不同的地方是，函数受**函数作用域**限制，而类受**块作用域**限制：
+- 另一个跟函数声明不同的地方是，函数受**函数作用域**限制，而类受**块作用域**限制：
 
 ```js
 {
@@ -50,7 +50,7 @@ console.log(ClassDeclaration); // ReferenceError: ClassDeclaration is not define
 
 ### 类的构成
 
-类可以包含**构造函数方法**、**实例方法**、**获取&设置 函数**和**静态类方法**，但这些都不是必需的。空的类定义照样有效。
+类可以包含**构造函数方法**、**实例方法**、**获取&设置 函数**和**静态类方法**。但这些都不是必需的，空的类定义照样有效。
 
 ```js
 // 空类定义，有效
@@ -378,7 +378,7 @@ new Bus() // true
 
 - `super()`的行为如同**调用构造函数**，如果需要给父类构造函数**传参**，则需要**手动传入**：
 
-```js{11}
+```js{8,11}
 class Vehicle {
   constructor(licensePlate) {
     this.licensePlate = licensePlate
@@ -418,9 +418,9 @@ new Bus()
 // before accessing 'this' or returning from derived constructor
 ```
 
-如果在派生类中**显式定义了构造函数**，则要么必须在其中**调用 `super()`**，要么必须在其中**返回一个对象**：
+- 如果在派生类中**显式定义了构造函数**，则要么必须在其中**调用 `super()`**，要么必须在其中**返回一个对象**：
 
-```js
+```js{5,10}
 class Vehicle {}
 class Car extends Vehicle {}
 class Bus extends Vehicle {
@@ -505,3 +505,9 @@ console.log(a) // [1, 2, 3, 4, 5]
 a.shuffle()
 console.log(a) // [3, 1, 4, 5, 2]
 ```
+
+<br>
+
+---
+
+🎉 class 类 这部分的内容还是蛮多的，也比较重要。我现在复习 class 就看这篇文章，绝大多数（书中）知识点都囊括了，希望可以帮助到你~ ❤
