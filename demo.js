@@ -1,8 +1,4 @@
-class Vehicle {
-  constructor() {
-    console.log(this)
-    this.hasEngine = true
-  }
+console.log(sum)
+let sum = function (num1, num2) {
+  return num1 + num2
 }
-
-const p = new Vehicle()
