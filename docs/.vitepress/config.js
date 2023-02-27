@@ -1,8 +1,11 @@
 export default {
   title: "zhaoyuuu's blog",
+  description: '个人博客，记录前端一些 有深度/有价值/有意思 的东西',
   lastUpdated: true,
-  description: 'Just playing around.',
-  base: '/blog',
+  base: '/blog/',
+  head: [
+    ['link', { rel: 'icon', type: 'image/x-icon', href: '/blog/favicon.ico' }],
+  ],
   themeConfig: {
     siteTitle: 'zhaoyuuu',
     logo: 'https://raw.githubusercontent.com/zhaoyuuu/blog/206b969f0a010b2de78851fcecf01a00a96b1626/docs/assets/logo.svg',
@@ -11,9 +14,15 @@ export default {
       text: 'Edit this page on GitHub',
     },
     nav: [
-      { text: 'Guide', link: '/guide/' },
-      { text: 'About Me', link: '/about_me/' },
+      { text: 'Guide', link: '/guide' },
+      { text: 'About Me', link: '/about_me' },
     ],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/zhaoyuuu/blog' }],
+    algolia: {
+      appId: '...',
+      apiKey: '...',
+      indexName: '...',
+    },
     sidebar: [
       {
         text: 'gemstone 红宝书',
@@ -69,6 +78,7 @@ export default {
           },
           {
             text: 'Chapter 8 对象、类与面向对象编程',
+            collapsed: true,
             items: [
               {
                 text: '理解对象',
@@ -86,6 +96,15 @@ export default {
               {
                 text: 'class 类',
                 link: '/gemstone/Chapter 8 对象、类与面向对象编程/class',
+              },
+            ],
+          },
+          {
+            text: 'Chapter 10 函数',
+            items: [
+              {
+                text: 'function',
+                link: '/gemstone/Chapter 10 函数/function',
               },
             ],
           },
@@ -163,11 +182,5 @@ export default {
         ],
       },
     ],
-    socialLinks: [{ icon: 'github', link: 'https://github.com/zhaoyuuu/blog' }],
-    algolia: {
-      appId: '...',
-      apiKey: '...',
-      indexName: '...',
-    },
   },
 }
