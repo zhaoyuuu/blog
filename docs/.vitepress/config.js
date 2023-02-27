@@ -10,7 +10,10 @@ export default {
       pattern: 'https://github.com/zhaoyuuu/blog/tree/master/docs/:path',
       text: 'Edit this page on GitHub',
     },
-    nav: [{ text: 'Guide', link: '/guide/' }],
+    nav: [
+      { text: 'Guide', link: '/guide/' },
+      { text: 'About Me', link: '/about_me/' },
+    ],
     sidebar: [
       {
         text: 'gemstone 红宝书',
@@ -161,5 +164,10 @@ export default {
       },
     ],
     socialLinks: [{ icon: 'github', link: 'https://github.com/zhaoyuuu/blog' }],
+    algolia: {
+      appId: '...',
+      apiKey: '...',
+      indexName: '...',
+    },
   },
 }

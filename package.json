@@ -18,10 +18,13 @@
         "@algolia/client-search"
       ]
     }
-  },  
+  },
   "devDependencies": {
     "prettier": "2.8.4",
     "vitepress": "1.0.0-alpha.47",
     "vue": "^3.2.47"
+  },
+  "dependencies": {
+    "@docsearch/js": "3"
   }
 }
