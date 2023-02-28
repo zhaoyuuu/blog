@@ -20,8 +20,11 @@
     }
   },
   "devDependencies": {
+    "flexsearch": "^0.7.31",
+    "markdown-it": "^13.0.1",
     "prettier": "2.8.4",
     "vitepress": "1.0.0-alpha.47",
+    "vitepress-plugin-search": "1.0.4-alpha.19",
     "vue": "^3.2.47"
   },
   "dependencies": {

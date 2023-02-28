@@ -18,11 +18,6 @@ export default {
       { text: 'About Me', link: '/about_me' },
     ],
     socialLinks: [{ icon: 'github', link: 'https://github.com/zhaoyuuu/blog' }],
-    algolia: {
-      appId: '...',
-      apiKey: '...',
-      indexName: '...',
-    },
     sidebar: [
       {
         text: 'gemstone 红宝书',
