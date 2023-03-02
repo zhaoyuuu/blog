@@ -4,8 +4,6 @@
 
 > 💌 WeakSet 是 Set 的“兄弟”类型，**其 API 也是 Set 的子集**。WeakSet 中的“weak”（弱），描述的是 JavaScript **垃圾回收程序对待“弱集合”中值的方式**。
 
-> ✨ `WeakSet 和 Set 的关系` 相比于 `WeakMap 和 Map 的关系`，不能说一模一样，只能说是一个模子刻出来的（WeakMap 弱的是“键”，WeakSet 弱的是“值”）。
-
 ## 基本 API
 
 ```js
@@ -54,4 +52,4 @@ WeakSet 之所以限制只能用对象作为值，是为了保证**只有通过�
 
 ---
 
-WeakSet 和 WeakMap 实在是太像了。
+`WeakSet 和 Set 的关系` 相比于 `WeakMap 和 Map 的关系`，不能说一模一样，只能说是一个模子刻出来的（只不过 WeakMap 弱的是“键”，WeakSet 弱的是“值”）。

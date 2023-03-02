@@ -275,11 +275,11 @@ p.sayName() // My name is Jake
 
 ## 继承
 
-ECMAScript 6 新增特性中**最出色**的一个就是**原生支持了类继承机制**。
+✨ ECMAScript 6 新增特性中**最出色**的一个就是**原生支持了类继承机制**。
 
 > 虽然类继承使用的是新语法，但背后依旧使用的是原型链。
 
-### 继承基础
+### 继承基础 extends
 
 使用 `extends` 关键字，就可以继承**任何拥有 `[[Construct]]` 和原型的对象**。很大程度上，这意味着**不仅可以继承一个类**，也可以继承**普通的构造函数**（保持向后兼容）：
 
@@ -305,7 +305,7 @@ console.log(e instanceof Person); // true
 
 在类构造函数中使用 `super` 可以**调用父类构造函数**。
 
-```js{8-9}
+```js{9}
 class Vehicle {
   constructor() {
     this.hasEngine = true

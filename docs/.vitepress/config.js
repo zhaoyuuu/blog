@@ -95,7 +95,17 @@ export default {
             ],
           },
           {
+            text: 'Chapter 9 代理与反射',
+            items: [
+              {
+                text: '代理基础',
+                link: '/gemstone/Chapter 9 代理与反射/代理基础',
+              },
+            ],
+          },
+          {
             text: 'Chapter 10 函数',
+            collapsed: true,
             items: [
               {
                 text: 'function',

@@ -1,8 +1,8 @@
-# 🤔 理解对象
+# 理解对象
 
 难度：⭐️⭐️⭐️
 
-> 💌 Object 是我们最常用的数据结构，但还是会对它的一些属性不太了解。
+> 💌 Object 是我们最常用的数据结构，但它的内容很多，所以还是容易对它的某些属性不太了解。
 
 对象的每个属性或方法都由一个名称来标识，这个名称映射到一个值。因此可以把 ECMAScript 的对象想象成一张**散列表**，其中的内容就是一组**名/值对**，值可以是数据或者函数。
 
@@ -38,7 +38,7 @@ console.log(person.name); // "Nicholas"（修改失效）
 
 由 `[[Configurable]]` 属性的定义可以得知，虽然可以对同一个属性多次调用 `Object.defineProperty()`，但在把 `configurable` 设置为 `false` 之后就会受限制了。
 
-**注意：** 在调用 `Object.defineProperty()`时，`configurable`、`enumerable` 和 `writable` 的值**如果不指定，则都默认为 false**。（我认为很反常规 😕）
+**注意：** 在调用 `Object.defineProperty()`时，`configurable`、`enumerable` 和 `writable` 的值**如果不指定，则都默认为 false**。（？我认为很反常规 😕）
 
 ### 访问器属性
 
@@ -55,7 +55,7 @@ console.log(person.name); // "Nicholas"（修改失效）
 
 ✨ 使用 **`Object.getOwnPropertyDescriptor()`** 方法可以取得**指定属性的属性描述符**。
 
-```js
+```js{6}
 let person = { age: 21 }
 Object.defineProperty(person, 'name', {
   value: 'Nicholas',

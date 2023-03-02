@@ -1,4 +1,8 @@
-let sum = function (num1, num2) {
-  return num1 + num2
+class Human {
+  say() {
+    console.log('say')
+  }
 }
-console.log(sum.__proto__ === sum.prototype)
+class Person extends Human {}
+const p = new Person()
+console.log(p.__proto__.__proto__.__proto__.constructor)
