@@ -1,8 +1,6 @@
-class Human {
-  say() {
-    console.log('say')
-  }
+async function fn() {
+  console.log(1)
+  console.log(await 3)
 }
-class Person extends Human {}
-const p = new Person()
-console.log(p.__proto__.__proto__.__proto__.constructor)
+fn()
+console.log(2)
