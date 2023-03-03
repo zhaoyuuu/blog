@@ -1,10 +1,14 @@
-## 思路
+# new
+
+💡 **Guide:**
+
 1. 创建一个全新的对象
-2. 这个对象的`__proto__`要指向构造函数的原型`prototype`
-3. 执行构造函数，使用 `call/apply` **改变 this 的指向**
-4. 返回值为object类型则作为new方法的返回值返回，否则返回上述全新对象
+2. 这个对象的`__proto__`指向构造函数的原型`prototype`（接入原型链）
+3. **执行构造函数**，使用 `call/apply` **改变 this 的指向**（这其实是两步）
+4. 构造函数如果返回一个对象，该对象作为 new 方法的返回值返回；否则返回上述全新对象
 
 ## 实现
+
 ```js
 function _new(constructorFn, ...args) {
   // 创建一个新对象，并绑定原型链
@@ -18,6 +22,7 @@ function _new(constructorFn, ...args) {
 ```
 
 ## 使用
+
 ```js
 // 定义构造函数 Person
 function Person(name, age) {
@@ -36,6 +41,7 @@ me.say()  // 我叫zhaoyuuu,我今年20岁
 ```
 
 特殊的，如果构造函数返回一个对象：
+
 ```js
 function Person(name, age) {
   this.name = name

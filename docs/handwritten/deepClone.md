@@ -1,31 +1,31 @@
-## 简单版（JSON）
+# deepclone 深拷贝
+
+## 简洁版（JSON）
+
+**_实现：_**
 
 ```js
 const cloneObj = JSON.parse(JSON.stringify(obj))
 ```
-### 使用
+
+**_使用_：**
+
 ```js
-/* 克隆对象 */
 const obj = {
-  name: '刘德华', 
+  name: '刘德华',
   song: '《给我一杯忘情水》'
 }
-
-const cloneObj = JSON.parse(JSON.stringify(obj))  // 拷贝
+// 拷贝 obj
+const cloneObj = JSON.parse(JSON.stringify(obj))
 console.log(cloneObj);  // { name: '刘德华', song: '《给我一杯忘情水》' }
-// 改变value
+// 改变属性值
 cloneObj.name = '张学友'
 cloneObj.song = '《吻别》'
 console.log(cloneObj);  // { name: '张学友', song: '《吻别》' }
-console.log(obj);  // { name: '刘德华', song: '《给我一杯忘情水》' }  源对象不变，深克隆
-
-/* 克隆数组 */
-const arr = [1,2,3]
-const cloneArr = JSON.parse(JSON.stringify(arr))
-console.log(cloneArr);  // [1,2,3]
+console.log(obj);  // { name: '刘德华', song: '《给我一杯忘情水》' } （不影响源对象，即深克隆）
 ```
-> 利用JSON实现的深拷贝确实简单，但是会有如下的问题：
-**无法实现对函数 、RegExp等特殊对象的克隆**
+
+⚠ 利用 JSON 实现的深拷贝确实简单，但是会有如下的问题：无法实现对**函数 、RegExp 等特殊对象的克隆**。
 
 ```js
 const obj = {
@@ -41,9 +41,9 @@ console.log(cloneObj);  // { name: 'liudehua', regexp: {} }   问题：sing函�
 
 ```
 
-> 既然JSON法深拷贝存在这些问题，在面试的时候面试官肯定不会就这样放过你，我们应该这样写：
+既然 JSON 法深拷贝存在这些问题，在面试的时候面试官肯定不会就这样放过你 🙃，面试中我们可以这样写 👇
 
-## 面试版
+## 进阶版
 
 ```js
 function deepClone(obj) {
@@ -61,12 +61,13 @@ function deepClone(obj) {
       res[key] = deepClone(obj[key])
     }
   }
-  
+
   return res
 }
 ```
 
 ### 使用
+
 ```js
 /* 声明 obj arr */
 const obj = {
@@ -76,18 +77,11 @@ const obj = {
   },
   regexp: /^\d{4}(\-)\d{1,2}\1\d{1,2}$/
 }
-const arr = [1,2,3]
 
 /* 使用deepClone函数 */
 const cloneObj = deepClone(obj)
 console.log(cloneObj);  // { name: 'liudehua', sing: [Function: sing], regexp: {} }
-cloneObj.sing()  // 给我一杯忘情水~ 
-
-const cloneArr = deepClone(arr)
-console.log(cloneArr);  // [ 1, 2, 3 ]
+cloneObj.sing()  // 给我一杯忘情水~
 ```
 
-> 调用深拷贝方法，若属性为值类型，则直接返回；若属性为引用类型，则递归遍历。这就是我们在解这一类题时的核心的方法。
-
-## 进阶版
-blabla
+👉 若属性为原始值，直接返回；若属性为引用类型，则递归遍历。这就是我们在解这一类题时的核心的方法。
