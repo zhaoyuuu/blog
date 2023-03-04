@@ -1,4 +1,7 @@
+# Sort-collection 排序合集
+
 ## 1 冒泡排序
+
 ```js
 function bubbleSort(list) {
   let len = list.length
@@ -20,6 +23,7 @@ console.log(sortArr);  // [1, 3, 12, 23, 56, 65, 99]
 ```
 
 ## 2 快速排序
+
 ```js
 function quickSort(list) {
   sortFn(0, list.length - 1)
@@ -65,6 +69,7 @@ console.log(sortArr);  // [1, 3, 12, 23, 56, 65, 99]
 ```
 
 ## 3 选择排序
+
 ```js
 function selectSort(list) {
   for(let i = 0; i < list.length; i++) {
@@ -88,6 +93,7 @@ console.log(sortArr);  // [1, 3, 12, 23, 56, 65, 99]
 ```
 
 ## 4 插入排序
+
 ```js
 function insertSort(list) {
   for(let i = 1; i < list.length; i++) {
@@ -107,6 +113,7 @@ console.log(sortArr);  // [1, 3, 12, 23, 56, 65, 99]
 ```
 
 ## 5 二分查找
+
 ```js
 function search(list, target) {
   // 这里假设 给定的list数组是递增的

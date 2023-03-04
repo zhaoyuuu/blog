@@ -1,5 +1,7 @@
 # deepclone 深拷贝
 
+💡 **Guide:** 两种实现方式：JSON / 递归函数。
+
 ## 简洁版（JSON）
 
 **_实现：_**
@@ -43,7 +45,7 @@ console.log(cloneObj);  // { name: 'liudehua', regexp: {} }   问题：sing函�
 
 既然 JSON 法深拷贝存在这些问题，在面试的时候面试官肯定不会就这样放过你 🙃，面试中我们可以这样写 👇
 
-## 进阶版
+## 完善版（递归）
 
 ```js
 function deepClone(obj) {

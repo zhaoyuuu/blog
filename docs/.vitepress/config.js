@@ -13,6 +13,11 @@ export default {
       pattern: 'https://github.com/zhaoyuuu/blog/tree/master/docs/:path',
       text: 'Edit this page on GitHub',
     },
+    algolia: {
+      appId: 'C0OGQMFGT6',
+      apiKey: '0f74937ff77db348efcb49e778156698',
+      indexName: 'zhaoyuuuio',
+    },
     nav: [
       { text: 'Guide', link: '/guide' },
       { text: 'About Me', link: '/about_me' },

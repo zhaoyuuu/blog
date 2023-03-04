@@ -1,4 +1,7 @@
-## 1 实现forEach方法
+# Array-collection 数组合集
+
+## 1 实现 forEach 方法
+
 ```js
 Array.prototype._forEach = function(callback, context) {
   // this => arr
@@ -21,7 +24,8 @@ arr._forEach((val, index, ARR) => {
 })
 ```
 
-## 2 实现filter方法
+## 2 实现 filter 方法
+
 ```js
 Array.prototype._filter = function(callback, context) {
   // self => arr
@@ -44,7 +48,8 @@ const res = arr._filter((val, index, ARR) => {
 console.log(res);  // [22, 33]
 ```
 
-## 3 实现find方法
+## 3 实现 find 方法
+
 ```js
 Array.prototype._find = function(callback, context) {
   // self => arr
@@ -64,7 +69,8 @@ const res = arr._find((val, index, ARR) => {
 console.log(res);  // 22
 ```
 
-## 4 实现findIndex方法
+## 4 实现 findIndex 方法
+
 ```js
 Array.prototype._findIndex = function(callback, context) {
   // self => arr
@@ -85,7 +91,8 @@ const res = arr._findIndex((val, index, ARR) => {
 console.log(res);  // 1
 ```
 
-## 5 实现map方法
+## 5 实现 map 方法
+
 ```js
 Array.prototype._map = function(callback, context) {
   // self => arr
@@ -103,7 +110,8 @@ const res = arr._map((val, index, ARR) => Math.sqrt(val))
 console.log(res);  // [ 1, 2, 3 ]
 ```
 
-## 5 实现map方法
+## 5 实现 map 方法
+
 ```js
 Array.prototype._map = function(callback, context) {
   // self => arr
@@ -121,13 +129,14 @@ const res = arr._map((val, index, ARR) => Math.sqrt(val))
 console.log(res);  // [ 1, 2, 3 ]
 ```
 
-## 6 实现reduce方法
+## 6 实现 reduce 方法
+
 ```js
 Array.prototype._reduce = function(callback, initialValue) {
   const arr = this
 
   // 考虑不传 initialValue 的情况
-  let res = initialValue ? initialValue : arr[0]  
+  let res = initialValue ? initialValue : arr[0]
   const startIndex = initialValue ? 0 : 1
 
   for(let i = startIndex; i < arr.length; i++) {
@@ -143,7 +152,8 @@ const res = arr._reduce((a, b) => a + b)
 console.log(res);  // 10
 ```
 
-## 7 实现every方法
+## 7 实现 every 方法
+
 ```js
 Array.prototype._every = function(callback, context) {
   const arr = this
@@ -161,7 +171,8 @@ console.log(arr1._every(isValid));  // false
 console.log(arr2._every(isValid));  // true  如果用一个空数组进行测试，在任何情况下它返回的都是true
 ```
 
-## 7 实现some方法
+## 7 实现 some 方法
+
 ```js
 Array.prototype._some = function(callback, context) {
   const arr = this

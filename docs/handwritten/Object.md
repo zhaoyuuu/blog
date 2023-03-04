@@ -1,4 +1,7 @@
-## 1 实现Object.create
+# Object-collection 对象合集
+
+## 1 实现 Object.create
+
 ```js
 Object._create = function(proto) {
   function Fn(){}
@@ -22,7 +25,8 @@ me.isHuman = true; // Inherited properties can be overwritten
 me.printIntroduction();  // My name is zhaoyuuu. Am I human? true
 ```
 
-## 2 实现Object.freeze
+## 2 实现 Object.freeze
+
 ```js
 Object._freeze = function(obj) {
   Object.seal(obj)  // 封闭对象
@@ -50,11 +54,13 @@ me.age = 78
 console.log(me.name, me.age);  // zhaoyuuu 21 ————修改失败
 ```
 
-## 3 实现Object.is
-`Object.is`不会像 `==` 一样，在判断前对两边的变量进行强制转换。
+## 3 实现 `Object.is`
+
+`Object.is`不会像 `==` 一样，在判断前对两边的变量进行类型转换。
 `Object.is`更像 `===` ，但有以下两点区别：
+
 1. `===` 运算符（也包括 `==` 运算符）将数字 -0 和 +0 视为相等
-2. `NaN === NaN` 结果为false
+2. `NaN === NaN` 结果为 false
 
 ```js
 Object._is = function(x, y) {

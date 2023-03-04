@@ -1,5 +1,9 @@
-## 1 实现Promise.resolve
+# Promise-collection Promise 合集
+
+## 1 实现 Promise.resolve
+
 ### 思路
+
 - 传参为一个 `Promise`, 则直接返回它。
 - 传参为一个 `thenable` 对象，**返回的 `Promise` 会跟随这个对象，采用它的最终状态作为自己的状态。**
 - 其他情况，直接返回以该值为成功状态的`promise`对象。
@@ -36,8 +40,10 @@ p4.then(val => {
 })
 ```
 
-## 2 实现Promise.reject
+## 2 实现 Promise.reject
+
 > Promise.reject 中传入的参数会作为一个 reason 原封不动地往下传：
+
 ```js
 Promise._reject = (reason) => {
   return new Promise((resolve, reject) => {
@@ -54,7 +60,8 @@ Promise._reject(new Error('fail!'))
   })
 ```
 
-## 3 实现Promise.prototype.finally
+## 3 实现 Promise.prototype.finally
+
 ```js
 Promise.prototype._finally = function(callback) {
   return this.then(data => {
@@ -129,11 +136,12 @@ Promise.reject(12)
   })
 ```
 
-## 4 实现Promise.all
+## 4 实现 Promise.all
+
 ```js
 Promise._all = function(iterable) {
   return new Promise((resolve, reject) => {
-    let index = 0 
+    let index = 0
     const res = []
     const len = iterable.length
     if(len === 0) {
@@ -152,7 +160,7 @@ Promise._all = function(iterable) {
           reject(err)
         })
     }
-    
+
   })
 }
 
@@ -168,7 +176,8 @@ Promise._all([p1, p2, p3]).then(values => {
 });
 ```
 
-## 5 实现Promise.allSettled
+## 5 实现 Promise.allSettled
+
 ```js
 Promise._allSettled = function(iterable) {
   return new Promise((resolve, reject) => {
@@ -210,7 +219,8 @@ Promise._allSettled([
 // ]
 ```
 
-## 6 实现Promise.race
+## 6 实现 Promise.race
+
 ```js
 Promise._race = function(iterable) {
   return new Promise((resolve, reject) => {
@@ -223,7 +233,7 @@ Promise._race = function(iterable) {
           reject(err)
         })
     }
-  })  
+  })
 }
 
 // 使用

@@ -1,4 +1,7 @@
+# AJAX
+
 ## 1 原生实现
+
 ```js
 function ajax(url) {
   // 1. 创建 xhr 实例对象
@@ -19,7 +22,8 @@ function ajax(url) {
 }
 ```
 
-## 2 Promise封装
+## 2 Promise 封装
+
 ```js
 function ajax_promise(url) {
   return new Promise((resolve, reject) => {
@@ -41,7 +45,7 @@ function ajax_promise(url) {
 
 // 使用
 const url = '/data.json'
-ajax(url)
+ajax_promise(url)
   .then(res => console.log(res))
   .catch(reason => console.log(reason))
 ```
