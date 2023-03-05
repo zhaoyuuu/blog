@@ -110,25 +110,6 @@ const res = arr._map((val, index, ARR) => Math.sqrt(val))
 console.log(res);  // [ 1, 2, 3 ]
 ```
 
-## 5 实现 map 方法
-
-```js
-Array.prototype._map = function(callback, context) {
-  // self => arr
-  const self = this, len = self.length, res = []
-  for(let i = 0; i < len; i++) {
-    const item = callback.call(context, self[i], i, self)
-    res.push(item)
-  }
-  return res
-}
-
-// 使用
-const arr = [1, 4, 9]
-const res = arr._map((val, index, ARR) => Math.sqrt(val))
-console.log(res);  // [ 1, 2, 3 ]
-```
-
 ## 6 实现 reduce 方法
 
 ```js
@@ -171,7 +152,7 @@ console.log(arr1._every(isValid));  // false
 console.log(arr2._every(isValid));  // true  如果用一个空数组进行测试，在任何情况下它返回的都是true
 ```
 
-## 7 实现 some 方法
+## 8 实现 some 方法
 
 ```js
 Array.prototype._some = function(callback, context) {
@@ -188,4 +169,27 @@ const arr2 = []
 const isValid = n => n < 4
 console.log(arr1._some(isValid));  // true
 console.log(arr2._some(isValid));  // false  若收到一个空数组，此方法在任何情况下都会返回 true
+```
+
+## 9 实现 flat 方法
+
+```js
+Array.prototype._flat = function (depth = 1) {
+  const arr = this
+  // 终止条件
+  if (depth === 0) return arr
+  // 单次遍历逻辑
+  return arr.reduce((pre, cur) => {
+    return pre.concat(Array.isArray(cur) ? cur._flat(depth - 1) : cur)
+  }, [])
+}
+
+const arr = [1, 2, [3, [4, [5, 6]]]]
+console.log(arr._flat())
+//[ 1, 2, 3, [ 4, [ 5, 6 ] ] ]（扁平一层）
+console.log(arr._flat(2))
+//[ 1, 2, 3, 4, [ 5, 6 ] ]（扁平两层）
+console.log(arr._flat(Infinity))
+//[ 1, 2, 3, 4, 5, 6 ]（完全扁平）
+
 ```
