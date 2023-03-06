@@ -193,3 +193,45 @@ console.log(arr._flat(Infinity))
 //[ 1, 2, 3, 4, 5, 6 ]（完全扁平）
 
 ```
+
+## 10 实现 shuffle 洗牌 方法
+
+🧐 题目要求：
+
+```js
+// 打乱数组，有可能是 [1, 3, 2, 4]，但对原数组没有影响
+shuffle([1, 2, 3, 4]);
+```
+
+😎 **实现：**
+
+- 利用 `Array.prototype.sort` 的技巧解法：
+
+```js
+const shuffle = list => {
+  const newList = [...list]
+  newList.sort(() => Math.random() - 0.5)
+  return newList
+}
+// 使用
+const arr = [1, 2, 3, 4]
+const shuffledArr = shuffle(arr)
+console.log(shuffledArr) //顺序打乱
+```
+
+- 使用以下算法可实现**洗牌算法**:
+  1. 第 N 项数字与前 N 项数字随机选一相互交换
+  2. 第 N-1 项数字与前 N-1 项数字随机选一相互交换
+  3. ...
+  4. 第 2 项数字与前 2 项数字随机选一相互交换
+
+```js
+const shuffle = list => {
+  const newList = [...list]
+  for (let i = list.length - 1; i >= 0; i--) {
+    const swapIndex = Math.floor(Math.random() * (i + 1))
+    [newList[i], newList[swapIndex]] = [newList[swapIndex], newList[i]]
+  }
+  return newList
+}
+```
