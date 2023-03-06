@@ -101,6 +101,7 @@ export default {
           },
           {
             text: 'Chapter 9 代理与反射',
+            collapsed: true,
             items: [
               {
                 text: '代理基础',
@@ -134,6 +135,7 @@ export default {
           },
           {
             text: 'Chapter 12 BOM',
+            collapsed: true,
             items: [
               {
                 text: 'window',
@@ -179,10 +181,12 @@ export default {
           { text: '12 AJAX', link: '/handwritten/ajax' },
           { text: '13 Sort-collection', link: '/handwritten/sort' },
           { text: '14 Object-collection', link: '/handwritten/Object' },
+          { text: '15 JSONP', link: '/handwritten/JSONP' },
         ],
       },
       {
         text: 'essays 随笔',
+        collapsed: true,
         items: [
           { text: 'introduction', link: '/essays/intro' },
           {

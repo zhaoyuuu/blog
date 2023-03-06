@@ -1,17 +1,27 @@
-Array.prototype._flat = function (depth = 1) {
-  const arr = this
-  // 终止条件
-  if (depth === 0) return arr
-  // 单次遍历逻辑
-  return arr.reduce((pre, cur) => {
-    return pre.concat(Array.isArray(cur) ? cur._flat(depth - 1) : cur)
-  }, [])
+const jsonp = ({ url, params, callback }) => {
+  return new Promise((resolve, reject) => {
+    window[callback] = data => {
+      resolve(data)
+      document.removeChild(script)
+    }
+    const arr = []
+    for (let key in params) {
+      arr.push(`${key}=${params[key]}`)
+    }
+    const script = document.createElement('script')
+    script.type = 'text/javascript'
+    script.src = `${url}?callback=${callback}&${arr.join('&')}`
+    document.body.appendChild(script)
+  })
 }
 
-const arr = [1, 2, [3, [4, [5, 6]]]]
-console.log(arr._flat())
-//[ 1, 2, 3, [ 4, [ 5, 6 ] ] ]（扁平一层）
-console.log(arr._flat(2))
-//[ 1, 2, 3, 4, [ 5, 6 ] ]（扁平两层）
-console.log(arr._flat(Infinity))
-//[ 1, 2, 3, 4, 5, 6 ]（完全扁平）
+jsonp({
+  url: 'http://suggest.taobao.com/sug',
+  callback: 'getData',
+  params: {
+    q: 'iphone手机',
+    code: 'utf-8',
+  },
+}).then(data => {
+  console.log(data)
+})
