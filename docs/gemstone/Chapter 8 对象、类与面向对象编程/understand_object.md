@@ -38,8 +38,6 @@ console.log(person.name); // "Nicholas"（修改失效）
 
 由 `[[Configurable]]` 属性的定义可以得知，虽然可以对同一个属性多次调用 `Object.defineProperty()`，但在把 `configurable` 设置为 `false` 之后就会受限制了。
 
-**注意：** 在调用 `Object.defineProperty()`时，`configurable`、`enumerable` 和 `writable` 的值**如果不指定，则都默认为 false**。（？我认为很反常规 😕）
-
 ### 访问器属性
 
 访问器属性不包含数据值。相反，它们包含一个获取（`getter`）函数和一个设置（`setter`）函数，不过这两个函数不是必需的。
