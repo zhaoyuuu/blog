@@ -17,7 +17,7 @@ function _new(constructorFn, ...args) {
   const ret = constructorFn.apply(newObj, args)  // 改变 this 指向
   // 如果执行结果有返回值并且是一个对象, 返回执行的结果,
   // 否则, 返回新创建的对象
-  return typeof ret === 'object' ? ret : newObj
+  return ret !== null && typeof ret === 'object' ? ret : newObj
 }
 ```
 
