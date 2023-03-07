@@ -182,6 +182,7 @@ export default {
           { text: '13 Sort-collection', link: '/handwritten/sort' },
           { text: '14 Object-collection', link: '/handwritten/Object' },
           { text: '15 JSONP', link: '/handwritten/JSONP' },
+          { text: '16 Infinite-sum', link: '/handwritten/infinite_sum' },
         ],
       },
       {
