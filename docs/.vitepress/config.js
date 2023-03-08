@@ -149,6 +149,10 @@ export default {
                 text: 'navigator',
                 link: '/gemstone/Chapter 12 BOM/navigator',
               },
+              {
+                text: 'screen',
+                link: '/gemstone/Chapter 12 BOM/screen',
+              },
             ],
           },
         ],
