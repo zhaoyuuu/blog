@@ -153,6 +153,10 @@ export default {
                 text: 'screen',
                 link: '/gemstone/Chapter 12 BOM/screen',
               },
+              {
+                text: 'history',
+                link: '/gemstone/Chapter 12 BOM/history',
+              },
             ],
           },
         ],
