@@ -19,10 +19,10 @@ sum(1)(2)(3)(4)(5)(6).valueOf(); // 21
 
 ```js
 const sum = function (...args) {
-  const f = n => sum(...args, n)
+  const f = (...newArgs) => sum(...args, ...newArgs)
   f.valueOf = () => args.reduce((pre, cur) => pre + cur)
   return f
 }
 
-console.log(sum(1)(2)(3)(4).valueOf()) // 10
+console.log(sum(1)(2)(3, 4).valueOf()) // 10
 ```
