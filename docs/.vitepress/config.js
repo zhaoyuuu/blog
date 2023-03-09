@@ -161,7 +161,7 @@ export default {
           },
           {
             text: 'Chapter 23 JSON',
-            // collapsed: true,
+            collapsed: true,
             items: [
               {
                 text: 'JSON',
