@@ -212,6 +212,7 @@ export default {
           { text: '15 JSONP', link: '/handwritten/JSONP' },
           { text: '16 Infinite-sum', link: '/handwritten/infinite_sum' },
           { text: '17 Pub-sub pattern', link: '/handwritten/pubsub_pattern' },
+          { text: '18 Observe pattern', link: '/handwritten/observe_pattern' },
         ],
       },
       {
