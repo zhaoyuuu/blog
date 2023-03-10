@@ -169,6 +169,16 @@ export default {
               },
             ],
           },
+          {
+            text: 'Chapter 25 客户端存储',
+            collapsed: true,
+            items: [
+              {
+                text: 'cookie',
+                link: '/gemstone/Chapter 25 客户端存储/cookie',
+              },
+            ],
+          },
         ],
       },
       {
@@ -201,6 +211,7 @@ export default {
           { text: '14 Object-collection', link: '/handwritten/Object' },
           { text: '15 JSONP', link: '/handwritten/JSONP' },
           { text: '16 Infinite-sum', link: '/handwritten/infinite_sum' },
+          { text: '17 Pub-sub pattern', link: '/handwritten/pubsub_pattern' },
         ],
       },
       {
