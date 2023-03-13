@@ -216,6 +216,23 @@ export default {
         ],
       },
       {
+        text: 'interview 面试',
+        collapsed: true,
+        items: [
+          { text: 'introduction', link: '/interview/intro' },
+          {
+            text: 'JS',
+            collapsed: true,
+            items: [
+              {
+                text: '深浅拷贝',
+                link: '/interview/深浅拷贝',
+              },
+            ],
+          },
+        ],
+      },
+      {
         text: 'essays 随笔',
         collapsed: true,
         items: [

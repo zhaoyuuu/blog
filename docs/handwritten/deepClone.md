@@ -45,7 +45,7 @@ console.log(cloneObj);  // { name: 'liudehua', regexp: {} }   问题：sing函�
 
 既然 JSON 法深拷贝存在这些问题，在面试的时候面试官肯定不会就这样放过你 🙃，面试中我们可以这样写 👇
 
-## 完善版（递归）
+## 面试版（递归）
 
 ```js
 function deepClone(obj) {
@@ -86,4 +86,4 @@ console.log(cloneObj);  // { name: 'liudehua', sing: [Function: sing], regexp: {
 cloneObj.sing()  // 给我一杯忘情水~
 ```
 
-👉 若属性为原始值，直接返回；若属性为引用类型，则递归遍历。这就是我们在解这一类题时的核心的方法。
+👉 若属性为**原始值，直接返回**；若属性为**引用类型，则递归遍历**。这就是我们在解这一类题时的核心的方法。
