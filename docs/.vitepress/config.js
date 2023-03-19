@@ -213,6 +213,7 @@ export default {
           { text: '16 Infinite-sum', link: '/handwritten/infinite_sum' },
           { text: '17 Pub-sub pattern', link: '/handwritten/pubsub_pattern' },
           { text: '18 Observe pattern', link: '/handwritten/observe_pattern' },
+          { text: '19 maxBy()', link: '/handwritten/maxBy' },
         ],
       },
       {
