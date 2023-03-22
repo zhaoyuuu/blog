@@ -33,7 +33,7 @@ const sortArr = bubbleSort(arr)
 console.log(sortArr);  // [1, 3, 12, 23, 56, 65, 99]
 ```
 
-## 2 快速排序
+## 2 快速排序 💎
 
 ### 算法：
 
@@ -46,41 +46,23 @@ console.log(sortArr);  // [1, 3, 12, 23, 56, 65, 99]
 ### 实现：
 
 ```js
-function quickSort(list) {
-  sortFn(0, list.length - 1)
-  return list
-
-  function sortFn(left, right) {
-    if(left >= right) return
-    const leftIndex = left, rightIndex = right
-    const base = list[left]
-    let isPitLeft = true
-    while(left < right) {
-      if(isPitLeft) {
-        if(list[right] > base) {
-          right--
-        }
-        else {
-          list[left] = list[right]
-          left++
-          isPitLeft = false
-        }
-      }
-      else {
-        if(list[left] < base) {
-          left++
-        }
-        else {
-          list[right] = list[left]
-          right--
-          isPitLeft = true
-        }
-      }
+function quickSort(nums) {
+  // 终止条件
+  if (nums.length < 2) return nums
+  // base 基准值
+  const base = nums[0]
+  // 小于base的数推入 leftNums 数组，大于base的数推入 rightNums 数组
+  const leftNums = [],
+    rightNums = []
+  for (let i = 1; i < nums.length; i++) {
+    if (nums[i] <= base) {
+      leftNums.push(nums[i])
+    } else {
+      rightNums.push(nums[i])
     }
-    list[left] = base
-    sortFn(leftIndex, left - 1)
-    sortFn(right + 1, rightIndex)
   }
+  // 递归处理 leftNums rightNums，并返回数组
+  return [...quickSort(leftNums), base, ...quickSort(rightNums)]
 }
 
 // 使用
