@@ -224,21 +224,30 @@ console.log('p4.finally() returns');
 
 ```js
 let p1 = new Promise((resolve, reject) => {
- console.log('p1 executor');
- setTimeout(resolve, 1000);
-});
-p1.then(() => new Promise((resolve, reject) => {
- console.log('p2 executor');
- setTimeout(resolve, 1000);
- }))
- .then(() => new Promise((resolve, reject) => {
- console.log('p3 executor');
- setTimeout(resolve, 1000);
- }))
- .then(() => new Promise((resolve, reject) => {
- console.log('p4 executor');
- setTimeout(resolve, 1000);
- }));
+  console.log('p1 executor')
+  setTimeout(resolve, 1000)
+})
+p1.then(
+  () =>
+    new Promise((resolve, reject) => {
+      console.log('p2 executor')
+      setTimeout(resolve, 1000)
+    })
+)
+  .then(
+    () =>
+      new Promise((resolve, reject) => {
+        console.log('p3 executor')
+        setTimeout(resolve, 1000)
+      })
+  )
+  .then(
+    () =>
+      new Promise((resolve, reject) => {
+        console.log('p4 executor')
+        setTimeout(resolve, 1000)
+      })
+  )
 // p1 executor（1 秒后）
 // p2 executor（2 秒后）
 // p3 executor（3 秒后）

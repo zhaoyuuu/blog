@@ -1,14 +1,19 @@
-function fn(cookieNums, requestNums, widthArr, bagArr) {
-  const cookieWeight = read_line().split(' ').map(width => Math.pow(parseInt(width), 2))
-  cookieWeight.sort((a, b) => a - b)
-  const bag = read_line().split(' ').map(n => parseInt(n))
-  const res = []
-  for(let i = 0; i < requestNums; i++) {
-    let sum = 0, count = -1
-    for(let j = 0; sum <= bag[i] && j < cookieNums; j++) {
-      sum += cookieWeight[j]
-      count++
-    }
-    res.push(count)
-  }
+const target = {
+  foo: 'bar',
 }
+const firstProxy = new Proxy(target, {
+  get() {
+    console.log('first proxy')
+    return Reflect.get(...arguments)
+  },
+})
+const secondProxy = new Proxy(firstProxy, {
+  get() {
+    console.log('second proxy')
+    return Reflect.get(...arguments)
+  },
+})
+console.log(secondProxy.foo)
+// second proxy
+// first proxy
+// bar
