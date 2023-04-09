@@ -222,16 +222,10 @@ export default {
         collapsed: true,
         items: [
           { text: 'introduction', link: '/interview/intro' },
-          {
-            text: 'JS',
-            collapsed: true,
-            items: [
-              {
-                text: '深浅拷贝',
-                link: '/interview/深浅拷贝',
-              },
-            ],
-          },
+          { text: 'HTML', link: '/interview/html' },
+          { text: 'CSS', link: '/interview/css' },
+          { text: 'JavaScript', link: '/interview/js' },
+          { text: 'React', link: '/interview/react' },
         ],
       },
       {
