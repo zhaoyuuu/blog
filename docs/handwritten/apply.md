@@ -25,7 +25,7 @@ const me = {
   name: 'zhaoyuuu',
   age: 20
 }
-sayFn._call(me, 1, 2)
+sayFn._apply(me, [1, 2])
 //1 + 2 = 3
 //我是zhaoyuuu, 我今年20岁
 console.log(me);
