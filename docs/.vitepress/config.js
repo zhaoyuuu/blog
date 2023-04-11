@@ -226,6 +226,8 @@ export default {
           { text: 'CSS', link: '/interview/css' },
           { text: 'JavaScript', link: '/interview/js' },
           { text: 'React', link: '/interview/react' },
+          { text: 'Browser', link: '/interview/browser' },
+          { text: 'Webpack', link: '/interview/webpack' },
         ],
       },
       {
