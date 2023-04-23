@@ -218,17 +218,34 @@ export default {
         ],
       },
       {
-        text: 'interview 面试',
+        text: 'React',
+        collapsed: true,
+        items: [{ text: 'Interview-collection', link: '/react/interview' }],
+      },
+      {
+        text: 'Browser',
+        collapsed: true,
+        items: [{ text: 'Interview-collection', link: '/browser/interview' }],
+      },
+      {
+        text: 'Patterns',
         collapsed: true,
         items: [
-          { text: 'introduction', link: '/interview/intro' },
-          { text: 'HTML', link: '/interview/html' },
-          { text: 'CSS', link: '/interview/css' },
-          { text: 'JavaScript', link: '/interview/js' },
-          { text: 'React', link: '/interview/react' },
-          { text: 'Browser', link: '/interview/browser' },
-          { text: 'Webpack', link: '/interview/webpack' },
+          {
+            text: 'Patterns-collection',
+            link: '/patterns/patterns-collection',
+          },
         ],
+      },
+      {
+        text: 'CSS',
+        collapsed: true,
+        items: [{ text: 'Interview-collection', link: '/css/interview' }],
+      },
+      {
+        text: 'Webpack',
+        collapsed: true,
+        items: [{ text: 'Interview-collection', link: '/webpack/interview' }],
       },
       {
         text: 'essays 随笔',

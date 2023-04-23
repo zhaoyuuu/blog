@@ -1,3 +1,5 @@
+# React 面试题合集
+
 ## 什么是 React
 
 React 是一个 JS UI 库，用于构建高效、快速的用户的界面。特点：
@@ -171,3 +173,42 @@ Why?
 2. React 需要**利用调用顺序来正确更新相应的状态，以及调用相应的钩子函数**。一旦在循环或条件分支语句中调用 Hook，就容易导致调用顺序的不一致性，导致错误。
 
 ## useEffect 与 useLayoutEffect 的区别
+
+## useCallback 与 useMemo 的区别
+
+## React 性能优化的手段，避免不必要的 render
+
+- 可以使用 `shouldComponentUpdate` 和 `PureComponent` 来减少因父组件更新而触发子组件的更新，`Purecomponent` 只做浅层的比较
+- 使用 `React.memo` 缓存组件的渲染，避免不必要的更新
+- 使用 `useMemo` 或者 `useCallback` 缓存变量或者函数
+- 使用 `Suspense`(react16.6 新增组件)或者 `lazy` 进行组件的懒加载，`Suspense` 可以在组件请求数据时展示一个 pending 状态，请求成功后渲染数据
+
+```js
+import React, { Suspense } from 'react';
+
+const OtherComponent = React.lazy(() => import('./OtherComponent'));
+
+function MyComponent() {
+  return (
+    <div>
+      // 组件加载阶段，显示一个loading...
+      <Suspense fallback={<div>Loading...</div>}>
+        <OtherComponent />
+      </Suspense>
+    </div>
+  );
+}
+```
+
+- 在显示列表或表格时始终使用 `key`，这会让 React 的 Diff 速度更快
+
+## React 路由的实现原理
+
+**_基于 hash 的路由：_**
+
+改变 `hash` 可以直接通过 `location.hash` 获取 => 通过监听 `hashchange` 事件，感知 `hash` 的变化。
+
+**_基于 H5 history 路由：_**
+
+1. 可以通过 `history.pushState` 和 `resplaceState` 等方法改变 URL，会将 URL 压入栈，同时能够应用 `history.go()` 等 API
+2. 监听 URL 的变化可以通过自定义事件触发实现
